@@ -59,6 +59,7 @@ src="https://s3-alpha-sig.figma.com/img/1b73/04b2/85d08c0f8b29f8fc61ad6621680532
        
   
       <Layout>
+        
 
       <Sider className='hidden lg:block mt-1'style={{  background: colorBgContainer,}}>
         <div className="demo-logo-vertical" />
@@ -174,9 +175,9 @@ src="https://s3-alpha-sig.figma.com/img/1b73/04b2/85d08c0f8b29f8fc61ad6621680532
               height:48
               
             }}  /> 
-            <Button  size="large" className='rounded-full hidden lg:block mb-2 marg float-right text-white'> + Add User</Button>
+            <Button  size="large" className='rounded-xl hidden lg:block mb-2 marg float-right text-white'> + Add User</Button>
             </div> 
-            < Input size ="large" className="rounded-full flex-none lg:hidden" placeholder=" Search" Search prefix={<SearchOutlined />} style={{background: "#F9FAFB",
+            < Input size ="large" className="rounded-xl flex-none lg:hidden" placeholder=" Search" Search prefix={<SearchOutlined />} style={{background: "#F9FAFB",
               width:100,
               height:48}} /> 
                    <br />

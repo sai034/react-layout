@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import {ArrowDownOutlined } from '@ant-design/icons';
+import {ArrowDownOutlined,ArrowLeftOutlined,ArrowRightOutlined   } from '@ant-design/icons';
 import axios from 'axios';
+
 import '../App.css';
-import { Table } from 'antd';
+import { Table,Pagination ,Button} from 'antd';
 
 
 const para = () =>{
@@ -72,7 +73,13 @@ const columns = [
     key: 'city',
     responsive:['sm']
   },
- 
+   {
+
+    title:' ',
+    dataIndex:'dot',
+    key:'dot',
+    responsive:['sm']
+   },
 ];
 
 
@@ -100,8 +107,9 @@ const [ users, setUsers ] = useState([]);
              <p className='mt-2 ml-2'> Catalog</p>
           </div>
         )
-        record["city"] = record.address.city
-      })
+         record["city"] = record.address.city
+         record["dot"] = '⫶'
+             })
 
 
       setUsers(GetUsers.data)
@@ -109,14 +117,40 @@ const [ users, setUsers ] = useState([]);
       console.log(error)
     }
   }
-
+  const [ currentPage,setCurrentPage ] = useState('');
+  const pageSize = 5;
+  const handlePageChange = (page) => {
+     setCurrentPage(page)
+ ;
+   };
+ 
+   const currentData = users.slice((currentPage - 1) * pageSize, currentPage * pageSize);
+ 
+   const itemRender = (_, type, originalElement) => {
+     if (type === 'prev') {
+       return <Button><ArrowLeftOutlined />Previous</Button>;
+     }
+     if (type === 'next') {
+       return <Button>Next <ArrowRightOutlined /></Button>;
+     }
+     return originalElement;
+   };
 
 
   return (
     <div className="App2">
     
-      <Table  dataSource={users} columns={columns}  />;
-
+      <Table  dataSource={users} columns={columns} pagination = {true} />;
+   
+      <div className="hidden lg:block bg-white shadow p-4 text-center lg:text-right">
+            <Pagination
+              defaultCurrent={1}
+              total={50}
+              pageSize={10}
+              itemRender={itemRender}
+              className="inline-block"
+            />
+          </div>
 
 
     </div>
