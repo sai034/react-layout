@@ -1,36 +1,70 @@
 import React, { useState, useEffect } from 'react';
-
+import {ArrowDownOutlined } from '@ant-design/icons';
 import axios from 'axios';
+import '../App.css';
 import { Table } from 'antd';
 
 
+const para = () =>{
+  <p>Company <ArrowDownOutlined /></p>
+}
 const columns = [
   {
-    title: 'Company',
+    title:'Company ↓',
     dataIndex: 'company',
     key: 'company',
+    
+  
   },
   {
     title: 'Company Name',
     dataIndex: 'name',
     key: 'name',
+  
+   
   },
   {
-    title: 'Email Address',
-    dataIndex: 'email',
+    title:'Email Address',
+    dataIndex:'email',
     key: 'email',
+    responsive:['sm'],
   },
+
+  {
+    title: 'Details',
+    render: (record) => (
+      <React.Fragment>
+        {record.email}
+        <br />
+        {record.phone}
+        <br />
+        {record.city}
+        <br />
+      </React.Fragment>
+    
+    ),
+  
+   responsive:['xs']
+  
+  },
+
   {
     title: 'Phone Number',
     dataIndex: 'phone',
     key: 'phone',
+    responsive:['sm']
   },
   {
     title: 'City',
     dataIndex: 'city',
     key: 'city',
+    responsive:['sm']
   },
+ 
 ];
+
+
+
 
 
 
@@ -68,7 +102,10 @@ const [ users, setUsers ] = useState([]);
 
   return (
     <div className="App2">
-      <Table dataSource={users} columns={columns} />;
+    
+      <Table  dataSource={users} columns={columns}  />;
+
+
 
     </div>
   );
