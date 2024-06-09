@@ -13,14 +13,14 @@ const columns = [
     title:'Company ↓',
     dataIndex: 'company',
     key: 'company',
-    
+    responsive:['sm'],
   
   },
   {
     title: 'Company Name',
     dataIndex: 'name',
     key: 'name',
-  
+    responsive:['sm'],
    
   },
   {
@@ -29,9 +29,21 @@ const columns = [
     key: 'email',
     responsive:['sm'],
   },
-
   {
-    title: 'Details',
+    title: 'Company Details',
+    render: (record) => (
+      <React.Fragment>
+        {record.company}
+        <br />
+       <p className='ml-8'> {record.name}</p>
+        <br />
+      </React.Fragment>
+    
+    ),
+    responsive:['xs']
+  },
+  {
+    title: 'Contact Details',
     render: (record) => (
       <React.Fragment>
         {record.email}

@@ -2,13 +2,11 @@ import React from 'react';
 import { useState } from 'react';
 import Table from './Table.jsx'
 import { LaptopOutlined, NotificationOutlined, UserOutlined,BellOutlined,MenuFoldOutlined,DownOutlined  } from '@ant-design/icons';
-import { Breadcrumb, Layout, Menu, theme,Image,Button,Row,Col,Drawer } from 'antd';
+import { Breadcrumb, Layout, Menu, theme,Image,Button,Row,Col,Drawer,Alert } from 'antd';
 import { CommentOutlined,SearchOutlined,UsergroupDeleteOutlined,VideoCameraOutlined,UploadOutlined } from '@ant-design/icons';
 import { Input, } from 'antd'
 
 const { Header, Content, Sider } = Layout;
-<BellOutlined />
-
 const App = () => {
   const [open, setOpen] = useState(false);
   const showDrawer = () => {
@@ -35,11 +33,10 @@ const App = () => {
         > 
         <div className='flex flex-row'>
        <Image 
-className='rounded-full hidden lg:block'
+className='rounded-full hidden lg:block '
 width={60}
 height={60}
- 
-// <p className=' mt-2 ml-3 text-gray-500'>Admin@review</p>
+
 src="https://s3-alpha-sig.figma.com/img/1b73/04b2/85d08c0f8b29f8fc61ad6621680532e7?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=jL-bUidq5M16EEZfHpFAmmBUEo1rC5bBx2zl~bqpaHPAm~HjhmMtpgQCZYDGo-n5jUpw2miEOMub3U7AmLtKmAedG7unfpYK5hY7e4NwFSJqu8BYeuzhZ3PfEOnJ4TD-smwYCpTpOWppuCgUttfT4VBEYs1K0OjWRpp9GtuhYm~XHsBxQi97F2uKq0108EO~dDytD5F39obWk7krVsezPtH-KYTgd7lZSCKSc~pmIoX4r46k6jSTLwtR3EuMqTcJ9PNQjLg1ayEPZclEtEbKCyuL5G2kaFeZd5UBbYSwAdprVixU5v1fkkVIXMm3s0F~SwW-lPuCjVVNfryGEEwk~Q__"
 >
 
@@ -54,9 +51,7 @@ src="https://s3-alpha-sig.figma.com/img/1b73/04b2/85d08c0f8b29f8fc61ad6621680532
  <div className='flex flex-row'>  
 
  <p className='headerText ml-32 font-bold mx-4'>Users</p>
- 
- 
- 
+  
     </div>
 
     </div>
@@ -100,7 +95,7 @@ src="https://s3-alpha-sig.figma.com/img/1b73/04b2/85d08c0f8b29f8fc61ad6621680532
       </Sider>
 
       <Drawer onClose={onClose} open={open}   placement="left">
-    
+       
       <img
 className='ml-4 rounded-full '
 width="60px"
@@ -185,7 +180,7 @@ src="https://s3-alpha-sig.figma.com/img/1b73/04b2/85d08c0f8b29f8fc61ad6621680532
               width:100,
               height:48}} /> 
                    <br />
-<Button  size="small" className='rounded-full flex-none lg:hidden mt-4 mr-24 marg1 float-left text-white'> + Add User</Button>
+<Button  size="small" className='rounded-full flex-none lg:hidden mt-4 mr-24 marg1 float-left text-white' > + Add User</Button>
           
                <Table />
                

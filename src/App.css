@@ -75,3 +75,6 @@ line-height: 48px;
 .widt {
   width: 48px;
 }
+.ant-menu-item-selected {
+  background-color:  #00D2D0;
+}

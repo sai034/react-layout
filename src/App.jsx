@@ -15,10 +15,10 @@ function App() {
  <div>
  
     {/* <h1> hello</h1> */}
-    <div className='rounded-full hidden lg:block mt-6 mr-12 pr-1 pl-1 w-7 h-7 bg-gray-200 text-green-500 float-right'>
+    <div className='widt rounded-full hidden lg:block mt-6 mr-16 pr-1 pl-1 text-green-500 float-right'>
     <BellOutlined />
     </div>
-    <div className='rounded-full flex-none lg:hidden mt-6 mr-2 ml-24 pr-1 pl-1 w-7 h-7 bg-gray-200 text-green-500 float-right'>
+    <div className='widt rounded-full flex-none lg:hidden mt-6 ml-12 pr-1 pl-1 text-green-500 float-right'>
 
     <BellOutlined />
     </div>
