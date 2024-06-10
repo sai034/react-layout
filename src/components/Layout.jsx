@@ -141,23 +141,7 @@ src="https://s3-alpha-sig.figma.com/img/1b73/04b2/85d08c0f8b29f8fc61ad6621680532
             background: 'white'
           }}
         >
-          <Breadcrumb
-            style={{
-              margin: '16px 0',
-            
-            }}
-          >
-          <Breadcrumb.Item className=' ml-6' >  
-  
-{/* <Search prefix={<SearchOutlined />} placeholder=" Search" style={{ width: 350,height: 48 }} />  */}
-
-
-
-{/* </Space.Compact> */}
-
-</Breadcrumb.Item>
-
-          </Breadcrumb>
+         
           <Content
             style={{
              
@@ -168,7 +152,7 @@ src="https://s3-alpha-sig.figma.com/img/1b73/04b2/85d08c0f8b29f8fc61ad6621680532
               borderRadius: borderRadiusLG,
             }}
           >
-          <div className='flex flex-row hidden lg:block'>
+          <div className='flex flex-row justify-between hidden lg:block'>
             <Input size="large"  placeholder="  Search"  prefix={<SearchOutlined />} style={{background: "#F9FAFB",
               width:252,
               height:48
@@ -176,12 +160,13 @@ src="https://s3-alpha-sig.figma.com/img/1b73/04b2/85d08c0f8b29f8fc61ad6621680532
             }}  /> 
             <Button  size="large" className='rounded-xl hidden lg:block mb-2 marg float-right text-white'> + Add User</Button>
             </div> 
-            < Input size ="large" className="flex-none lg:hidden" placeholder=" Search" Search prefix={<SearchOutlined />} style={{background: "#F9FAFB",
+            <div className='flex justify-between'>
+            < Input size ="large" className="flex-none lg:hidden " placeholder=" Search" Search prefix={<SearchOutlined />} style={{background: "#F9FAFB",
               width:100,
               height:48}} /> 
                    <br />
-              <Button  size="small" className='rounded-xl flex-none lg:hidden mt-4 mr-24 marg1 float-left text-white' > + Add User</Button>
-          
+              <Button  size="small" className='rounded-xl flex-none lg:hidden ml-24 marg1 float-left text-white' > + Add User</Button>
+          </div>
                <Table />
                
            </Content>

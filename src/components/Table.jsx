@@ -80,7 +80,7 @@ const columns = [
     title:' ',
     dataIndex:'dot',
     key:'dot',
-    responsive:['xs','sm']
+    responsive:['sm']
    },
 ];
 
