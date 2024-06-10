@@ -14,6 +14,7 @@ const columns = [
     title:'Company ↓',
     dataIndex: 'company',
     key: 'company',
+    // a responsive property to ["sm"] means that the column will show on sm and larger screens.
     responsive:['sm'],
   
   },
@@ -41,6 +42,7 @@ const columns = [
       </React.Fragment>
     
     ),
+    //  the responsive property on that column to only show on xs screens.
     responsive:['xs']
   },
   {
@@ -71,14 +73,14 @@ const columns = [
     title: 'City',
     dataIndex: 'city',
     key: 'city',
-    responsive:['sm']
+    responsive:['md']
   },
    {
 
     title:' ',
     dataIndex:'dot',
     key:'dot',
-    responsive:['sm']
+    responsive:['xs','sm']
    },
 ];
 
@@ -140,8 +142,8 @@ const [ users, setUsers ] = useState([]);
   return (
     <div className="App2">
     
-      <Table  dataSource={users} columns={columns} pagination = {true} />;
-   
+      <Table  className="flex-none lg:hidden" dataSource={users} columns={columns} pagination = {true} />
+      <Table  className="hidden lg:block" dataSource={users} columns={columns} pagination = {false} />
       <div className="hidden lg:block bg-white shadow p-4 text-center lg:text-right">
             <Pagination
               defaultCurrent={1}

@@ -32,10 +32,9 @@ const App = () => {
           
         > 
         <div className='flex flex-row'>
-       <Image 
-className='rounded-full hidden lg:block '
-width={60}
-height={60}
+       <Image className='rounded-full hidden lg:block '
+             width={60}
+             height={60}
 
 src="https://s3-alpha-sig.figma.com/img/1b73/04b2/85d08c0f8b29f8fc61ad6621680532e7?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=jL-bUidq5M16EEZfHpFAmmBUEo1rC5bBx2zl~bqpaHPAm~HjhmMtpgQCZYDGo-n5jUpw2miEOMub3U7AmLtKmAedG7unfpYK5hY7e4NwFSJqu8BYeuzhZ3PfEOnJ4TD-smwYCpTpOWppuCgUttfT4VBEYs1K0OjWRpp9GtuhYm~XHsBxQi97F2uKq0108EO~dDytD5F39obWk7krVsezPtH-KYTgd7lZSCKSc~pmIoX4r46k6jSTLwtR3EuMqTcJ9PNQjLg1ayEPZclEtEbKCyuL5G2kaFeZd5UBbYSwAdprVixU5v1fkkVIXMm3s0F~SwW-lPuCjVVNfryGEEwk~Q__"
 >
@@ -177,11 +176,11 @@ src="https://s3-alpha-sig.figma.com/img/1b73/04b2/85d08c0f8b29f8fc61ad6621680532
             }}  /> 
             <Button  size="large" className='rounded-xl hidden lg:block mb-2 marg float-right text-white'> + Add User</Button>
             </div> 
-            < Input size ="large" className="rounded-xl flex-none lg:hidden" placeholder=" Search" Search prefix={<SearchOutlined />} style={{background: "#F9FAFB",
+            < Input size ="large" className="flex-none lg:hidden" placeholder=" Search" Search prefix={<SearchOutlined />} style={{background: "#F9FAFB",
               width:100,
               height:48}} /> 
                    <br />
-<Button  size="small" className='rounded-full flex-none lg:hidden mt-4 mr-24 marg1 float-left text-white' > + Add User</Button>
+              <Button  size="small" className='rounded-xl flex-none lg:hidden mt-4 mr-24 marg1 float-left text-white' > + Add User</Button>
           
                <Table />
                
